@@ -1,38 +1,147 @@
-.App {
+:root{
+  --red: #f54e4e;
+  --green: #4aec8c;
+}
+
+body{
+  background-color: #30384b;
+  color: #eee;
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+}
+main{
+  padding-top: 50px;
+  max-width: 340px;
+  margin: 0;
   text-align: center;
+  
+}
+button{
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  border: 0;
+  display: inline-block;
+  width: 100px;
+  cursor: pointer;
+
+}
+button.with-text{
+  width: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px, 20px;
+  font-size: 1.4rem;
+  line-height: 36px;
+}
+button.with-text svg{
+  width: 36px;
+  float: left;
+  margin-right: 10px;
+}
+label{
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  text-transform:capitalize;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{ 
+  height: 100vh;
+  color:#fff;
+  background-color:hsl(48, 100%, 50%);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+/* Pirma eilutė */
+.title{
+  font-size: 4rem;
+  text-align: center;
+  color:#fff;
+  margin-top: 0px;
 }
+form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  }
+/* Užduočių sąrašo divas */
+.todo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+/* Formos įvestis: pagrindinė eilutė */
+.todo-input{
+  border: none;
+  width: 300px;
+  height: 50px;
+  font-size: 1.5rem;
+  border-radius: 3px;
+}
+/* Mygtukas su pliusu */
+.todo-button{
+  font-size: 2rem;
+  color:coral;
+  background-color:#fff;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+/* Filtro eilutė */
+.filter-todo{
+  border: none;
+  font-size: 1.5rem;
+  width: 180px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+/* Užduočių sąrašo: užduotis */
+.todo li{
+  border:none;
+  width: 450px;
+  padding: 7px;
+  font-size: 1.5rem;
+  background-color: #fff;
+  color: #000;
+  margin: 5px;
+  border-radius: 3px;
+  word-wrap: break-word;
+  list-style-type: none;
+  margin-left: 0;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+/* Užduočių sąrašo Užbaigta mygtukas*/
+.complete-btn{
+  background-color:lightseagreen;
+  color:#fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  height: 50px;
+  margin: 5px 0;
+  border-radius: 3px;
+}
+/* Užduočių sąrašo Delete mygtukas*/
+.trash-btn{
+  background-color:coral;
+  color:#fff;
+  border: none;
+  cursor: pointer;
+  height: 50px;
+  font-size: 1.5rem;
+  margin: 5px 0 0 0;
+  border-radius: 3px;
+}
+/* Užduočių sąrašo Užbaigta mygtuko stilius*/
+.completed{
+  text-decoration: line-through;
+  opacity: 0.7;
 }
