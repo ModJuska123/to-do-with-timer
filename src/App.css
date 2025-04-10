@@ -14,9 +14,13 @@ body{
 }
 main{
   padding-top: 50px;
-  max-width: 340px;
+  max-width: 100%;
   margin: 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   
 }
 button{
@@ -50,17 +54,26 @@ label{
 
 
 
+/* Nuo čia to-do */
+
 .App{ 
-  height: 100vh;
   color:#fff;
-  background-color:hsl(48, 100%, 50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #4c5a66;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8); /* Add shadow */
+  width: 55%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  transition: all 0.3s ease;
 }
 /* Pirma eilutė */
 .title{
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
   color:#fff;
   margin-top: 0px;
