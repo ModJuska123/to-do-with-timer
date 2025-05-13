@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/to-do-with-timer/static/css/main.6fe9359c.css",
+    "main.js": "/to-do-with-timer/static/js/main.f60954fd.js",
+    "index.html": "/to-do-with-timer/index.html",
+    "main.6fe9359c.css.map": "/to-do-with-timer/static/css/main.6fe9359c.css.map",
+    "main.f60954fd.js.map": "/to-do-with-timer/static/js/main.f60954fd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6fe9359c.css",
+    "static/js/main.f60954fd.js"
+  ]
+}
