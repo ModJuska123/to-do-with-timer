@@ -7,17 +7,17 @@ import Settings from './Components/Settings';
 import SettingsContext from './Components/SettingsContext';
 
 const App = () => {
-    
+
     //To-do
     const [inputText, setInputText] = useState("");
     const [todos, setTodos] = useState([]);
     const [status, setStatus] = useState('all');
     const [filteredTodos, setFilteredTodos] = useState([]);
-    
+
     //Timer
     const [showSettings, setShowSettings] = useState(false);
     const [workMinutes, setWorkMinutes] = useState(25);
-    const[breakMinutes, setBrackeMinutes] = useState(5);
+    const [breakMinutes, setBrackeMinutes] = useState(5);
 
     //UseEffect
     useEffect(() => {
@@ -67,7 +67,7 @@ const App = () => {
         }
     };
 
-    
+
 
 
     return (
@@ -82,7 +82,7 @@ const App = () => {
             }}>
                 {showSettings ? <Settings /> : <Timer />}
             </SettingsContext.Provider>
-            
+
             <div className="App">
                 <h1 className="title">
                     Todo list

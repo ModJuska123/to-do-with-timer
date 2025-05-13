@@ -16,13 +16,16 @@ function Timer() {
     const [isPaused, setIsPaused] = useState(true);
     const [secondsLeft, setSecondsLeft] = useState(0);
     const [mode, setMode] = useState('work'); // work or break or null
-
     const secondsLeftRef = useRef(secondsLeft);
     const isPausedRef = useRef(isPaused);
     const modeRef = useRef(mode);
 
-    function initTimer() {
-        setSecondsLeft(settingsInfo.workMinutes * 60);
+    function initTimer(workMinutes) {
+        const initialSeconds = workMinutes * 60;
+        setSecondsLeft(initialSeconds);
+        secondsLeftRef.current = initialSeconds;
+        setMode('work');
+        modeRef.current = 'work';
     }
 
     function switchMode() {
@@ -43,18 +46,15 @@ function Timer() {
     }
 
     useEffect(() => {
-        initTimer();
+        initTimer(settingsInfo.workMinutes);
 
         const interval = setInterval(() => {
-            if (isPausedRef.current) { return; }
-            if (secondsLeftRef.current === 0) { return switchMode(); }
-
+            if (isPausedRef.current)  return; 
+            if (secondsLeftRef.current === 0) return switchMode(); 
             tick();
-
         }, 1000);
-
         return () => clearInterval(interval); //
-    }, [settingsInfo]);
+    }, []);
 
     const totalSeconds = mode === 'work'
         ? settingsInfo.workMinutes * 60
