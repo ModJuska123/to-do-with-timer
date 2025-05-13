@@ -5,6 +5,7 @@ import './App.css';
 import Timer from './Components/Timer';
 import Settings from './Components/Settings';
 import SettingsContext from './Components/SettingsContext';
+import ResponsiveComponent from './Components/ResponsiveComponent';
 
 const App = () => {
 
@@ -68,8 +69,6 @@ const App = () => {
     };
 
 
-
-
     return (
         <main>
             <SettingsContext.Provider value={{
@@ -90,6 +89,10 @@ const App = () => {
                 <Form setStatus={setStatus} todos={todos} setTodos={setTodos} inputText={inputText} setInputText={setInputText} />
                 <TodoList filteredTodos={filteredTodos} setTodos={setTodos} todos={todos} />
             </div>
+            <ResponsiveComponent>
+                <button className="complete-btn">✔</button>
+                <button className="trash-btn">🗑</button>
+            </ResponsiveComponent>
 
         </main>
 
